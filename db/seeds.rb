@@ -6,8 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Trap.create([
-    {name: 'Trap1'},
-    {name: 'Trap2'},
-    {name: 'Trap3'}
-])
+#Trap.create([
+    #{name: 'Trap1'},
+    #{name: 'Trap2'},
+    #{{name: 'Trap3'}
+#])}
+
+Request.create(trap_id: 1, remote_ip: '111.111')

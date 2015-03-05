@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303182117) do
+ActiveRecord::Schema.define(version: 20150305140835) do
+
+  create_table "requests", force: :cascade do |t|
+    t.string   "remote_ip",      limit: 255
+    t.string   "request_method", limit: 255
+    t.string   "scheme",         limit: 255
+    t.string   "query_string",   limit: 255
+    t.binary   "query_params",   limit: 65535
+    t.binary   "cookies",        limit: 65535
+    t.binary   "headers",        limit: 65535
+    t.integer  "trap_id",        limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
 
   create_table "traps", force: :cascade do |t|
     t.string   "name",       limit: 255

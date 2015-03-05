@@ -31,7 +31,6 @@ gem 'mysql2'
 gem 'bootstrap-sass-rails'
 gem 'autoprefixer-rails'
 gem 'sass'
-gem 'active_model_serializers'
 gem 'angularjs-rails-resource'
 
 #gem 'coffee-script-redux-debugger', :git => 'git://github.com/JetBrains/coffee-script-redux-debugger.git'
