@@ -4,7 +4,7 @@ class RequestController < ApplicationController
   def show
     @request = Request.find_by(id: params[:id])
     if @request
-      render json: @request
+      render json: @request.as_json
     end
   end
 end

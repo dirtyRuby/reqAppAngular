@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305140835) do
+ActiveRecord::Schema.define(version: 20150306115000) do
 
   create_table "requests", force: :cascade do |t|
     t.string   "remote_ip",      limit: 255

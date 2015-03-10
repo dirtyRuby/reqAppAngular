@@ -32,6 +32,8 @@ gem 'bootstrap-sass-rails'
 gem 'autoprefixer-rails'
 gem 'sass'
 gem 'angularjs-rails-resource'
+gem 'active_model_serializers'
+gem 'websocket-rails'
 
 #gem 'coffee-script-redux-debugger', :git => 'git://github.com/JetBrains/coffee-script-redux-debugger.git'
 

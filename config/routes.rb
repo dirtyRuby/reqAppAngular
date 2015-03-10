@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'request/show'
+  root :to => 'home#index'
 
   controller :traps do
     get '/traps' => :index
