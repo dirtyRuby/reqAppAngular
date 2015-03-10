@@ -34,7 +34,9 @@ gem 'angularjs-rails-resource'
 gem 'active_model_serializers'
 gem 'websocket-rails'
 gem 'rails_12factor'
+gem 'angularjs-rails'
 
+ruby '2.2.0'
 #gem 'coffee-script-redux-debugger', :git => 'git://github.com/JetBrains/coffee-script-redux-debugger.git'
 
 
