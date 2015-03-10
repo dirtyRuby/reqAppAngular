@@ -29,4 +29,5 @@
 //= require controllers/trapController
 //= require controllers/requestController
 //= require routes
+//= require_tree assets/templates
 
