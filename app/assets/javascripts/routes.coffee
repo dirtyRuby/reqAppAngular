@@ -4,19 +4,19 @@ angular.module('reqApp').config [
   ($routeProvider, $locationProvider) ->
     $routeProvider
     .when '/traps',
-      templateUrl: '/assets/index.html',
+      templateUrl: '/assets/templates/index.html',
       controller: 'TrapsController',
       controllerAs: 'trapsCtrl'
     .when '/traps/:trap_id/requests',
-      templateUrl: '/assets/show.html',
+      templateUrl: '/assets/templates/show.html',
       controller: 'TrapController',
       controllerAs: 'trapCtrl'
     .when '/traps/:trap_id/requests/:id',
-      templateUrl: '/assets/request_show.html',
+      templateUrl: '/assets/templates/request_show.html',
       controller: 'RequestController',
       controllerAs: 'requestCtrl'
     .when '/',
-      templateUrl: '/assets/home.html',
+      templateUrl: '/assets/templates/home.html',
       controller: 'HomeController',
       controllerAs: 'homeCtrl'
 
