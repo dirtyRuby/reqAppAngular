@@ -10,9 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require websocket_rails/main
 //= require jquery
 //= require jquery_ujs
+
+// require turbolinks
+
+//= require websocket_rails/main
 //= require angular
 //= require angular-resource
 //= require angular-route
@@ -31,3 +34,6 @@
 //= require routes
 //= dependent_on assets/templates
 
+//
+//= require_tree .
+//= require_tree ../templates
