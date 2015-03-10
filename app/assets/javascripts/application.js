@@ -31,5 +31,5 @@
 //= require controllers/trapsController
 //= require controllers/trapController
 //= require controllers/requestController
-//= require routes.coffee.erb
+//= require routes
 //= require_tree ../templates
