@@ -21,7 +21,7 @@
 //= require angular-route
 //= require angularjs/rails/resource
 //= require bootstrap
-//= require_tree .
+
 
 //
 // app related stuff
