@@ -4,7 +4,7 @@ angular.module('reqApp').config [
   ($routeProvider, $locationProvider) ->
     $routeProvider
     .when '/traps',
-      templateUrl: '//index.html',
+      templateUrl: '/templates/index.html',
       controller: 'TrapsController',
       controllerAs: 'trapsCtrl'
     .when '/traps/:trap_id/requests',
