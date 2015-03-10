@@ -22,7 +22,6 @@
 //= require angularjs/rails/resource
 //= require bootstrap
 
-
 //
 // app related stuff
 //= require modules
@@ -32,5 +31,5 @@
 //= require controllers/trapsController
 //= require controllers/trapController
 //= require controllers/requestController
-//= require routes
+//= require routes.coffee.erb
 //= require_tree ../templates
