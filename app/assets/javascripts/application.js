@@ -21,6 +21,7 @@
 //= require angular-route
 //= require angularjs/rails/resource
 //= require bootstrap
+//= require_tree .
 
 //
 // app related stuff
@@ -32,8 +33,4 @@
 //= require controllers/trapController
 //= require controllers/requestController
 //= require routes
-//= dependent_on assets/templates
-
-//
-//= require_tree .
 //= require_tree ../templates
