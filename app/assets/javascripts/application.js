@@ -15,6 +15,7 @@
 //= require angular/angular
 //= require angular-resource/angular-resource
 //= require angular-route/angular-route
+//= require websocket_rails/main
 //= require bootstrap
 
 //
