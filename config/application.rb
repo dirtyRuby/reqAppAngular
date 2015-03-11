@@ -22,7 +22,7 @@ module ReqAppAngular
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
 
-    config.serve_static_assets = true
+    config.serve_static_files = true
     # Explicitly register the extensions we are interested in compiling
     config.assets.precompile.push(Proc.new do |path|
       File.extname(path).in? [
