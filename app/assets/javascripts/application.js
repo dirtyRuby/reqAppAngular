@@ -13,9 +13,9 @@
 //= require websocket_rails/main
 //= require jquery
 //= require jquery_ujs
-//= require angular
-//= require angular-resource
-//= require angular-route
+//= require angular/angular
+//= require angular-resource/angular-resource
+//= require angular-route/angular-route
 //= require angularjs/rails/resource
 //= require bootstrap
 

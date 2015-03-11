@@ -1,4 +1,9 @@
+# View details for certain request
+
 angular.module('reqApp')
 .controller('RequestController', ['Request', '$scope', '$routeParams', (Request, $scope, $routeParams) ->
-    $scope.request = Request.get(trap_id: $routeParams.trap_id, id: $routeParams.id)
+    response = Request.get(trap_id: $routeParams.trap_id, id: $routeParams.id)
+    response.$promise.then((data)->
+      $scope.request = data
+    )
   ])

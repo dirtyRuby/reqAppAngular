@@ -31,12 +31,9 @@ gem 'bootstrap-sass-rails'
 gem 'autoprefixer-rails'
 gem 'sass'
 gem 'angularjs-rails-resource'
-gem 'active_model_serializers'
 gem 'websocket-rails'
 gem 'rails_12factor'
-gem 'angularjs-rails'
-gem 'rails_stdout_logging'
-gem 'rails_serve_static_assets'
+
 ruby '2.2.0'
 #gem 'coffee-script-redux-debugger', :git => 'git://github.com/JetBrains/coffee-script-redux-debugger.git'
 
