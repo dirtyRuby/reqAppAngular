@@ -22,7 +22,7 @@ module ReqAppAngular
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
 
-    config.serve_static_assets = true
+    config.serve_static_files = true
 
   end
 end
