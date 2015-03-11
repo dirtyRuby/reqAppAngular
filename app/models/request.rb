@@ -1,7 +1,7 @@
 class Request < ActiveRecord::Base
-  serialize :headers, JSON
-  serialize :cookies, JSON
-  serialize :query_params, JSON
+  serialize :headers
+  serialize :cookies
+  serialize :query_params
 
   belongs_to :trap
 end
