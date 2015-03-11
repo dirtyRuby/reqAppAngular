@@ -10,13 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require websocket_rails/main
 //= require jquery
 //= require jquery_ujs
 //= require angular/angular
 //= require angular-resource/angular-resource
 //= require angular-route/angular-route
-//= require angularjs/rails/resource
 //= require bootstrap
 
 //
@@ -29,4 +27,3 @@
 //= require controllers/trapController
 //= require controllers/requestController
 //= require routes
-

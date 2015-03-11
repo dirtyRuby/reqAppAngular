@@ -1,0 +1,19 @@
+<h1>{{data.response.trap_name}}</h1>
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Remote Ip</th>
+        <th>Method</th>
+        <th>Created at</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="request in data.response.requests" ng-click="changeView('traps/' + data.response.trap_name + '/requests/' + request.id)">
+        <td>{{$index+1}}</td>
+        <td>{{request.remote_ip}}</td>
+        <td>{{request.request_method}}</td>
+        <td>{{request.created_at | date: 'medium'}}</td>
+    </tr>
+    </tbody>
+</table>

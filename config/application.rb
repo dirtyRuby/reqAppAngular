@@ -20,9 +20,16 @@ module ReqAppAngular
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
-
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+
+    config.serve_static_assets = true
+    # Explicitly register the extensions we are interested in compiling
+    config.assets.precompile.push(Proc.new do |path|
+      File.extname(path).in? [
+                                 '.html', '.erb', '.haml',
+                                 '.png',  '.gif', '.jpg', '.jpeg', '.svg',
+                                 '.eot',  '.otf', '.svc', '.woff', '.ttf',
+                             ]
+    end)
   end
 end
