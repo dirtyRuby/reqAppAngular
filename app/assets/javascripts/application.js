@@ -22,6 +22,8 @@
 // app related stuff
 //= require modules
 //= require services/trapsService
+//= require services/trapService
+//= require services/requestService
 //= require controllers/mainController
 //= require controllers/homeController
 //= require controllers/trapsController
