@@ -32,7 +32,7 @@ gem 'autoprefixer-rails'
 gem 'sass'
 gem 'angularjs-rails-resource'
 gem 'websocket-rails'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'rails_serve_static_assets'
 
 ruby '2.2.0'
