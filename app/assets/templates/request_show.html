@@ -9,7 +9,7 @@
     <tbody>
     <tr ng-repeat="(key, value) in request">
       <td>{{key}}</td>
-      <td>{{value}}</td>
+      <td ng-hide="typeof(value) == 'hash'">{{value}}</td>
     </tr>
     </tbody>
 </table>

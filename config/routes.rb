@@ -2,14 +2,12 @@ Rails.application.routes.draw do
 
   root :to => 'home#index'
 
-  controller :traps do
-    get '/traps' => :index
-    match '/traps/:trap_id' => :capture_request, via: :all
-    get '/traps/:trap_id/requests' => :show
+  resources :traps, only: [:index] do
+    resources :requests, only: [:index, :show]
+  end
 
-    controller :request do
-      get '/traps/:trap_id/requests/:id' => :show
-    end
+  controller :capture_requests do
+    match '/:trap_id' => :create, via: :all
   end
 
 end
