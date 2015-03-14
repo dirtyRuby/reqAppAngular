@@ -1,13 +1,14 @@
 class CaptureRequestsController < ApplicationController
-  extend ActiveSupport::Concern
-  include CaptureRequestsHelpers
+  include AlreadyExists
 
   before_action :already_exists, only: :create
   skip_before_action :verify_authenticity_token
 
   #/:trap_id
   def create
-    @trap = Trap.find_or_create_by(name: params[:trap_id])
+    trap_id = params[:trap_id]
+    already_exists = already_exists(trap_id)
+    @trap = Trap.find_or_create_by(name: trap_id)
     header = Hash.new
     request.headers.each { |key, value| header[key] = value.to_s unless value.is_a?(Hash) }
     @req = create_request(@trap, request.remote_ip, request.method, request.scheme, request.query_string,
@@ -23,5 +24,11 @@ class CaptureRequestsController < ApplicationController
     trap.requests.create(remote_ip: remote_ip, request_method: request_method,
                          scheme: scheme, query_string: query_string,
                          query_params: query_params, cookies: cookies, headers: headers)
+  end
+
+  def already_exists trap_id
+    already_exists = false
+    already_exists = true if Trap.find_by(name: trap_id)
+    already_exists
   end
 end
