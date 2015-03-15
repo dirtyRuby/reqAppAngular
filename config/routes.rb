@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   controller :capture_requests do
-    match '/:trap_id' => :create, via: :all
+    match '/:trap_id' => :create, via: :all, constraints: lambda {|request| request.params[:trap_id] != 'websocket'}
   end
 
 end
