@@ -41297,6 +41297,28 @@ For instance:
 
 }).call(this);
 (function() {
+  angular.module('reqApp').directive('viewObject', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'assets/view-object.html',
+      controller: 'RequestController',
+      controllerAs: 'RequestCtrl'
+    };
+  });
+
+}).call(this);
+(function() {
+  angular.module('reqApp').directive('viewValue', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'assets/view-value.html',
+      controller: 'RequestController',
+      controllerAs: 'RequestCtrl'
+    };
+  });
+
+}).call(this);
+(function() {
   angular.module('reqApp').config([
     '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
       $routeProvider.when('/', {
@@ -41312,7 +41334,7 @@ For instance:
         controller: 'TrapController',
         controllerAs: 'trapCtrl'
       }).when('/traps/:trap_id/requests/:id', {
-        templateUrl: "/assets/request_show-ccd1a092aa682226d574c81a869466c7.html",
+        templateUrl: "/assets/request-show-ebff691b0a41e1afe636ea9852db52d8.html",
         controller: 'RequestController',
         controllerAs: 'requestCtrl'
       }).otherwise({
@@ -41345,6 +41367,7 @@ For instance:
 
 //
 // app related stuff
+
 
 
 

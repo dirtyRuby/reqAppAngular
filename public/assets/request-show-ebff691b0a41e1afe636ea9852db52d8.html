@@ -10,8 +10,9 @@
     <tr ng-repeat="(key, value) in request">
       <td>{{key}}</td>
       <td>
-          <view-object></view-object>
-          {{valueTypeOf(value)}}</td>
+        <view-object ng-if="valueTypeOf(value) == 'object'"></view-object>
+        <view-value ng-if="valueTypeOf(value) != 'object'"></view-value>
+      </td>
     </tr>
     </tbody>
 </table>

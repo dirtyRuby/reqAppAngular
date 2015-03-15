@@ -1,4 +1,8 @@
-@charset "UTF-8";
+@charset "UTF-8";/* line 4, /home/hp/Projects/reqAppAngular/app/assets/stylesheets/requests.scss */
+.key {
+  font-weight: bold;
+}
+
 /* This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
