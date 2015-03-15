@@ -9,7 +9,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="request in requests" ng-click="changeView('traps/' + trapName + '/requests/' + request.id)">
+    <tr ng-repeat="request in requests | orderBy:request.created_at" ng-click="changeView('traps/' + trapName + '/requests/' + request.id)">
         <td>{{$index+1}}</td>
         <td>{{request.remote_ip}}</td>
         <td>{{request.request_method}}</td>

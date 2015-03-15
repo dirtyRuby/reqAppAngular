@@ -24,10 +24,11 @@ angular.module('reqApp').config [
     # /traps/:trap_id/requests/:id
     # /traps/:trap_id/requests/:id.json
     .when '/traps/:trap_id/requests/:id',
-      templateUrl: "<%= asset_path('request_show.html') %>",
+      templateUrl: "<%= asset_path('request-show.html') %>",
       controller: 'RequestController',
       controllerAs: 'requestCtrl'
-
     # enabling html5Mode
+    .otherwise
+      redirectTo: '/'
     $locationProvider.html5Mode(true)
 ]

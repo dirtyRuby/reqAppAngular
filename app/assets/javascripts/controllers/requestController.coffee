@@ -6,4 +6,6 @@ angular.module('reqApp')
     response.$promise.then((data)->
       $scope.request = data
     )
+    $scope.valueTypeOf = (value) ->
+      typeof value
   ])
