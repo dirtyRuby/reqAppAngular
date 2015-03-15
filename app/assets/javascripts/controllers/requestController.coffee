@@ -1,4 +1,4 @@
-# View details for certain request
+# View details for certain request.
 
 angular.module('reqApp')
 .controller('RequestController', ['Request', '$scope', '$routeParams', (Request, $scope, $routeParams) ->

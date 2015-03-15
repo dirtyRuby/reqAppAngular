@@ -1,3 +1,5 @@
+# Directive to view value
+
 angular.module('reqApp')
 .directive('viewValue', ->
   restrict: 'E',
