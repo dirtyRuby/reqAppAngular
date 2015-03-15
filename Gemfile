@@ -31,8 +31,11 @@ gem 'bootstrap-sass-rails'
 gem 'autoprefixer-rails'
 gem 'sass'
 gem 'websocket-rails'
-gem 'rails_12factor'
 gem 'handlebars_assets'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 ruby '2.2.0'
 #gem 'coffee-script-redux-debugger', :git => 'git://github.com/JetBrains/coffee-script-redux-debugger.git'
