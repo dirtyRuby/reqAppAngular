@@ -1,0 +1,9 @@
+# Directive to view complex Object.
+
+angular.module('reqApp')
+.directive('viewObject', ->
+  restrict: 'E',
+  templateUrl: "<%= asset_path('view-object.html') %>",
+  controller: 'RequestController',
+  controllerAs: 'RequestCtrl'
+)

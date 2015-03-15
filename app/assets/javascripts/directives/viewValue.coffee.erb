@@ -1,9 +1,9 @@
-# Directive to view complex Object.
+# Directive to view value
 
 angular.module('reqApp')
-.directive('viewObject', ->
+.directive('viewValue', ->
   restrict: 'E',
-  templateUrl: 'assets/view-object.html',
+  templateUrl: "<%= asset_path('view-value.html') %>",
   controller: 'RequestController',
   controllerAs: 'RequestCtrl'
 )
