@@ -41334,7 +41334,7 @@ For instance:
         controller: 'TrapController',
         controllerAs: 'trapCtrl'
       }).when('/traps/:trap_id/requests/:id', {
-        templateUrl: "/assets/request-show-ebff691b0a41e1afe636ea9852db52d8.html",
+        templateUrl: "/assets/request-show-0e545a307fa362741fe7da75525ca1ab.html",
         controller: 'RequestController',
         controllerAs: 'requestCtrl'
       }).otherwise({
