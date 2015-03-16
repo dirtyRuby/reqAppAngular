@@ -21,8 +21,17 @@ module ReqAppAngular
     # config.i18n.default_locale = :de
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
-
+    config.assets.precompile.shift
     config.serve_static_files = true
+
+    # Precompile additional asset types
+    config.assets.precompile.push(Proc.new do |path|
+      File.extname(path).in? [
+                                 '.html', '.erb', '.haml',                 # Templates
+                                 '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
+                                 '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+                             ]
+    end)
 
   end
 end
