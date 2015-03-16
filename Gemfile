@@ -35,6 +35,7 @@ gem 'handlebars_assets'
 
 group :production do
   gem 'rails_12factor'
+  gem 'heroku_rails_deflate'
 end
 
 ruby '2.2.0'
