@@ -41300,7 +41300,7 @@ For instance:
   angular.module('reqApp').directive('viewObject', function() {
     return {
       restrict: 'E',
-      templateUrl: 'assets/view-object.html',
+      templateUrl: "/assets/view-object-7fcedc4a9bd98095e47260f4a3213754.html",
       controller: 'RequestController',
       controllerAs: 'RequestCtrl'
     };
@@ -41311,7 +41311,7 @@ For instance:
   angular.module('reqApp').directive('viewValue', function() {
     return {
       restrict: 'E',
-      templateUrl: 'assets/view-value.html',
+      templateUrl: "/assets/view-value-39385d7376b6dca2f1a1230c6c6d0fcc.html",
       controller: 'RequestController',
       controllerAs: 'RequestCtrl'
     };
