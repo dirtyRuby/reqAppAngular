@@ -1,34 +1,39 @@
 # Routes configuration
+# Nested routes are used
 angular.module('reqApp').config [
-  '$routeProvider'
+  '$stateProvider'
+  '$urlRouterProvider'
   '$locationProvider'
-  ($routeProvider, $locationProvider) ->
-    $routeProvider
-    # /
-    .when '/',
-      templateUrl: "<%= asset_path('home.html') %>",
-      controller: 'HomeController',
-      controllerAs: 'homeCtrl'
-    # /traps
-    # /traps.jso
-    .when '/traps',
-      templateUrl: "<%= asset_path('index.html') %>",
-      controller: 'TrapsController',
-      controllerAs: 'trapsCtrl'
-    # /traps/:trap_id/requests
-    # /traps/:trap_id/requests.json
-    .when '/traps/:trap_id/requests',
-      templateUrl: "<%= asset_path('show.html') %>",
-      controller: 'TrapController',
-      controllerAs: 'trapCtrl'
-    # /traps/:trap_id/requests/:id
-    # /traps/:trap_id/requests/:id.json
-    .when '/traps/:trap_id/requests/:id',
-      templateUrl: "<%= asset_path('request-show.html') %>",
-      controller: 'RequestController',
-      controllerAs: 'requestCtrl'
+  ($stateProvider, $urlRouterProvider, $locationProvider) ->
+    $urlRouterProvider.otherwise('/')
+    $stateProvider
+      # /
+      .state 'home',
+        url: '/',
+        templateUrl: "<%= asset_path('home.html') %>",
+        controller: 'HomeController',
+        controllerAs: 'homeCtrl'
+      # /traps
+      # /traps.jso
+      .state 'traps',
+        url: '/traps',
+        templateUrl: "<%= asset_path('index.html') %>",
+        controller: 'TrapsController',
+        controllerAs: 'trapsCtrl'
+      # /traps/:trap_id/requests
+      # /traps/:trap_id/requests.json
+      .state 'trap',
+        url: 'traps/:trap_id/requests',
+        templateUrl: "<%= asset_path('show.html') %>",
+        controller: 'TrapController',
+        controllerAs: 'trapCtrl'
+      # /traps/:trap_id/requests/:id
+      # /traps/:trap_id/requests/:id.json
+      .state 'request',
+        url: 'traps/:trap_id/requests/:id',
+        templateUrl: "<%= asset_path('request-show.html') %>",
+        controller: 'RequestController',
+        controllerAs: 'requestCtrl'
     # enabling html5Mode
-    .otherwise
-      redirectTo: '/'
     $locationProvider.html5Mode(true)
 ]
