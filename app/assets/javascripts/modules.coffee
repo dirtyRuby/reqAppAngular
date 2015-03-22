@@ -5,7 +5,7 @@ angular.module('reqApp.service', [
 ])
 # Sub module for routes
 angular.module('reqApp.routes', [
-  'ngRoute'
+  'ui.router'
 ])
 # Main application module
 angular.module('reqApp', [
